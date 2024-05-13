@@ -17,16 +17,16 @@ public class ProdutoRepositoryTests {
     public void inserir() {
         Produto p1 = new Produto(
                 null,
-                "coca cola",
+                "Dipirona",
                 Byte.valueOf("15"),
-                BigDecimal.valueOf(10.50),
+                BigDecimal.valueOf(1.50),
                 LocalDate.of(2024, 12, 30));
 
         Produto p2 = new Produto(
                 null,
-                "Sprite",
-                Byte.valueOf("23"),
-                BigDecimal.valueOf(8.00),
+                "Dorflex",
+                Byte.valueOf("10"),
+                BigDecimal.valueOf(2.50),
                 LocalDate.of(2024, 11, 25));
 
         produtoRepository.save(p1);
