@@ -20,14 +20,16 @@ public class ProdutoRepositoryTests {
                 "Dipirona",
                 Byte.valueOf("15"),
                 BigDecimal.valueOf(1.50),
-                LocalDate.of(2024, 12, 30));
+                LocalDate.of(2024, 12, 30),
+                null);
 
         Produto p2 = new Produto(
                 null,
                 "Dorflex",
                 Byte.valueOf("10"),
                 BigDecimal.valueOf(2.50),
-                LocalDate.of(2024, 11, 25));
+                LocalDate.of(2024, 11, 25),
+                null);
 
         produtoRepository.save(p1);
         produtoRepository.save(p2);

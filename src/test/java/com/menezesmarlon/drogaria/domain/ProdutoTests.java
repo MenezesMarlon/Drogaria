@@ -15,7 +15,8 @@ public class ProdutoTests {
                 "coca cola",
                 Byte.valueOf("15"),
                 BigDecimal.valueOf(10.50),
-                LocalDate.of(2024, 12, 30)
+                LocalDate.of(2024, 12, 30),
+                null
         );
         System.out.println(p);
     }
