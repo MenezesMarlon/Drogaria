@@ -1,12 +1,9 @@
 package com.menezesmarlon.drogaria.repository;
 
-import com.menezesmarlon.drogaria.domain.Produto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
 
 @SpringBootTest
 public class ProdutoRepositoryTests {
@@ -15,23 +12,23 @@ public class ProdutoRepositoryTests {
 
     @Test
     public void inserir() {
-        Produto p1 = new Produto(
-                null,
-                "Dipirona",
-                Byte.valueOf("15"),
-                BigDecimal.valueOf(1.50),
-                LocalDate.of(2024, 12, 30),
-                null);
-
-        Produto p2 = new Produto(
-                null,
-                "Dorflex",
-                Byte.valueOf("10"),
-                BigDecimal.valueOf(2.50),
-                LocalDate.of(2024, 11, 25),
-                null);
-
-        produtoRepository.save(p1);
-        produtoRepository.save(p2);
+//        Produto p1 = new Produto(
+//                null,
+//                "Dipirona",
+//                Byte.valueOf("15"),
+//                BigDecimal.valueOf(1.50),
+//                LocalDate.of(2024, 12, 30),
+//                null);
+//
+//        Produto p2 = new Produto(
+//                null,
+//                "Dorflex",
+//                Byte.valueOf("10"),
+//                BigDecimal.valueOf(2.50),
+//                LocalDate.of(2024, 11, 25),
+//                null);
+//
+//        produtoRepository.save(p1);
+//        produtoRepository.save(p2);
     }
 }
