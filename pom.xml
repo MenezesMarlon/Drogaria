@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.menezesmarlon</groupId>
-	<artifactId>drogaria</artifactId>
+	<artifactId>drogaria_api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>drogaria</name>
 	<description>Projeto Java com Spring Boot</description>
