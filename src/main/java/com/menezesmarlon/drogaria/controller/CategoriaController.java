@@ -25,11 +25,17 @@ public class CategoriaController {
         Categoria categoriaSalva = categoriaRepository.save(categoria);
         return categoriaSalva;
     }
+
     @DeleteMapping("/{codigo}")
     public Categoria remover(@PathVariable Integer codigo){
         Categoria categoria = categoriaRepository.findById(codigo).get();
         categoriaRepository.delete(categoria);
         return categoria;
+    }
+
+    @PutMapping
+    public Categoria editar(@RequestBody Categoria categoria){
+        return categoriaRepository.save(categoria);
     }
 
 }
