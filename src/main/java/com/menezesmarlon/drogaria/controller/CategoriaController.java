@@ -22,9 +22,10 @@ public class CategoriaController {
     }
 
     @GetMapping("/{codigo}")
-    public Categoria buscarPorCodigo(@PathVariable Integer codigo) {
+    public Categoria buscaPorCodigo(@PathVariable Integer codigo) {
         return categoriaRepository.findById(codigo).get();
     }
+
 
     @PostMapping
     public Categoria inserir(@RequestBody Categoria categoria) {
