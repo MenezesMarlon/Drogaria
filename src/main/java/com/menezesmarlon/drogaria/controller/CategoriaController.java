@@ -1,47 +1,42 @@
 package com.menezesmarlon.drogaria.controller;
 
 import com.menezesmarlon.drogaria.domain.Categoria;
-import com.menezesmarlon.drogaria.repository.CategoriaRepository;
+import com.menezesmarlon.drogaria.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("categorias")
 public class CategoriaController {
     @Autowired
-    private CategoriaRepository categoriaRepository;
+    private CategoriaService categoriaService;
 
     @GetMapping
     public List<Categoria> listar() {
-        List<Categoria> categorias = categoriaRepository.findAll(Sort.by(Sort.Direction.ASC, "codigo"));
+        List<Categoria> categorias = categoriaService.listar();
         return categorias;
     }
-
     @GetMapping("/{codigo}")
-    public Categoria buscaPorCodigo(@PathVariable Integer codigo) {
-        return categoriaRepository.findById(codigo).get();
+    public Categoria buscaPorCodigo(@PathVariable Integer codigo){
+        Categoria categoria = categoriaService.buscarPorCodigo(codigo);
+        return categoria;
     }
-
-
     @PostMapping
     public Categoria inserir(@RequestBody Categoria categoria) {
-        Categoria categoriaSalva = categoriaRepository.save(categoria);
+        Categoria categoriaSalva = categoriaService.inserir(categoria);
         return categoriaSalva;
     }
 
     @DeleteMapping("/{codigo}")
     public Categoria remover(@PathVariable Integer codigo) {
-        Categoria categoria = categoriaRepository.findById(codigo).get();
-        categoriaRepository.delete(categoria);
+        Categoria categoria = categoriaService.remover(codigo);
         return categoria;
     }
 
     @PutMapping
     public Categoria editar(@RequestBody Categoria categoria) {
-        return categoriaRepository.save(categoria);
+        return categoriaService.editar(categoria);
     }
 
 
