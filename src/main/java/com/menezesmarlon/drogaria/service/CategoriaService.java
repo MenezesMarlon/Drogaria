@@ -1,6 +1,7 @@
 package com.menezesmarlon.drogaria.service;
 
 import com.menezesmarlon.drogaria.domain.Categoria;
+import com.menezesmarlon.drogaria.exception.ResourceNotFindException;
 import com.menezesmarlon.drogaria.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -18,7 +19,7 @@ public class CategoriaService {
     public Categoria buscarPorCodigo(Integer codigo) {
         Optional<Categoria> resultado = categoriaRepository.findById(codigo);
         if (resultado.isEmpty()) {
-            throw new RuntimeException("Categoria não encontrada");
+            throw new ResourceNotFindException ();
         }
         Categoria categoria = resultado.get();
         return categoria;
