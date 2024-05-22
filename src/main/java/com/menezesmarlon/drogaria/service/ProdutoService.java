@@ -1,11 +1,13 @@
 package com.menezesmarlon.drogaria.service;
 
 import com.menezesmarlon.drogaria.domain.Produto;
+import com.menezesmarlon.drogaria.exception.ResourceNotFoundException;
 import com.menezesmarlon.drogaria.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProdutoService {
@@ -18,7 +20,13 @@ public class ProdutoService {
     }
 
     public Produto buscaPorCodigo(Short codigo) {
-        Produto produto = produtoRepository.findById(codigo).get();
+        Optional<Produto> resultado = produtoRepository.findById(codigo);
+        if (resultado.isEmpty()){
+            throw new ResourceNotFoundException();
+        }
+        Produto produto = resultado.get();
         return produto;
     }
+
+
 }
