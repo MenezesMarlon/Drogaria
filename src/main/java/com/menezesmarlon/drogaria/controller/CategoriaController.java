@@ -1,7 +1,7 @@
 package com.menezesmarlon.drogaria.controller;
 
 import com.menezesmarlon.drogaria.domain.Categoria;
-import com.menezesmarlon.drogaria.exception.ResourceNotFindException;
+import com.menezesmarlon.drogaria.exception.ResourceNotFoundException;
 import com.menezesmarlon.drogaria.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,7 +26,7 @@ public class CategoriaController {
         try{
         Categoria categoria = categoriaService.buscarPorCodigo(codigo);
         return categoria;
-        } catch (ResourceNotFindException e){
+        } catch (ResourceNotFoundException e){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Categoria não encontrada", e);
         }
     }

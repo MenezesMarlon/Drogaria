@@ -1,12 +1,11 @@
 package com.menezesmarlon.drogaria.service;
 
 import com.menezesmarlon.drogaria.domain.Categoria;
-import com.menezesmarlon.drogaria.exception.ResourceNotFindException;
+import com.menezesmarlon.drogaria.exception.ResourceNotFoundException;
 import com.menezesmarlon.drogaria.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,7 +18,7 @@ public class CategoriaService {
     public Categoria buscarPorCodigo(Integer codigo) {
         Optional<Categoria> resultado = categoriaRepository.findById(codigo);
         if (resultado.isEmpty()) {
-            throw new ResourceNotFindException ();
+            throw new ResourceNotFoundException();
         }
         Categoria categoria = resultado.get();
         return categoria;
