@@ -34,4 +34,14 @@ public class ProdutoService {
         return produtoSalvo;
     }
 
+    public Produto editar(Produto produto){
+        return produtoRepository.save(produto);
+    }
+
+    public Produto remover (Short codigo){
+        Produto produto = produtoRepository.findById(codigo).get();
+        produtoRepository.delete(produto);
+        return produto;
+    }
+
 }

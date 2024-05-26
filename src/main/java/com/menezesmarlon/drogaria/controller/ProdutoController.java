@@ -39,4 +39,14 @@ public class ProdutoController {
         return produtoSalvo;
     }
 
+    @DeleteMapping("/{codigo}")
+    public Produto remover(@PathVariable Short codigo){
+        return produtoService.remover(codigo);
+    }
+
+    @PutMapping
+    public Produto editar(@RequestBody Produto produto){
+        return produtoService.editar(produto);
+    }
+
 }
