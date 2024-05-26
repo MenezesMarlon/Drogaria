@@ -22,7 +22,7 @@ public class CategoriaController {
         return categorias;
     }
     @GetMapping("/{codigo}")
-    public Categoria buscaPorCodigo(@PathVariable Integer codigo){
+    public Categoria buscaPorCodigo(@PathVariable Short codigo){
         try{
         Categoria categoria = categoriaService.buscarPorCodigo(codigo);
         return categoria;
@@ -37,7 +37,7 @@ public class CategoriaController {
     }
 
     @DeleteMapping("/{codigo}")
-    public Categoria remover(@PathVariable Integer codigo) {
+    public Categoria remover(@PathVariable Short codigo) {
         Categoria categoria = categoriaService.remover(codigo);
         return categoria;
     }

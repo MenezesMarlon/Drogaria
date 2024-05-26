@@ -15,7 +15,7 @@ public class CategoriaService {
     @Autowired
     private CategoriaRepository categoriaRepository;
 
-    public Categoria buscarPorCodigo(Integer codigo) {
+    public Categoria buscarPorCodigo(Short codigo) {
         Optional<Categoria> resultado = categoriaRepository.findById(codigo);
         if (resultado.isEmpty()) {
             throw new ResourceNotFoundException();
@@ -34,7 +34,7 @@ public class CategoriaService {
         return categoriaSalva;
     }
 
-    public Categoria remover(Integer codigo) {
+    public Categoria remover(Short codigo) {
         Categoria categoria = categoriaRepository.findById(codigo).get();
         categoriaRepository.delete(categoria);
         return categoria;
