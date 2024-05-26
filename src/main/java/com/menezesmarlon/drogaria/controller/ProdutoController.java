@@ -33,4 +33,10 @@ public class ProdutoController {
 
     }
 
+    @PostMapping
+    public Produto inserir(@RequestBody Produto produto){
+        Produto produtoSalvo = produtoService.inserir(produto);
+        return produtoSalvo;
+    }
+
 }
