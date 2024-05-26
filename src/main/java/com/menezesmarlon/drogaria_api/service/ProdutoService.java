@@ -1,11 +1,10 @@
-package com.menezesmarlon.drogaria.service;
+package com.menezesmarlon.drogaria_api.service;
 
-import com.menezesmarlon.drogaria.domain.Produto;
-import com.menezesmarlon.drogaria.exception.ResourceNotFoundException;
-import com.menezesmarlon.drogaria.repository.ProdutoRepository;
+import com.menezesmarlon.drogaria_api.domain.Produto;
+import com.menezesmarlon.drogaria_api.exception.ResourceNotFoundException;
+import com.menezesmarlon.drogaria_api.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;

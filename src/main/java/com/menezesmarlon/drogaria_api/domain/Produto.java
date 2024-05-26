@@ -1,4 +1,4 @@
-package com.menezesmarlon.drogaria.domain;
+package com.menezesmarlon.drogaria_api.domain;
 
 
 import jakarta.persistence.*;

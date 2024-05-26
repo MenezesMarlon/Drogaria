@@ -1,8 +1,8 @@
-package com.menezesmarlon.drogaria.controller;
+package com.menezesmarlon.drogaria_api.controller;
 
-import com.menezesmarlon.drogaria.domain.Produto;
-import com.menezesmarlon.drogaria.exception.ResourceNotFoundException;
-import com.menezesmarlon.drogaria.service.ProdutoService;
+import com.menezesmarlon.drogaria_api.domain.Produto;
+import com.menezesmarlon.drogaria_api.exception.ResourceNotFoundException;
+import com.menezesmarlon.drogaria_api.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

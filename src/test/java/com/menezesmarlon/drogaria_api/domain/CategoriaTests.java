@@ -1,6 +1,5 @@
-package com.menezesmarlon.drogaria.domain;
+package com.menezesmarlon.drogaria_api.domain;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest

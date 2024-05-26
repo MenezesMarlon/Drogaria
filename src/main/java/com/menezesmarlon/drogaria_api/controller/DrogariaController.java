@@ -1,4 +1,4 @@
-package com.menezesmarlon.drogaria.controller;
+package com.menezesmarlon.drogaria_api.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.menezesmarlon.drogaria.exception;
+package com.menezesmarlon.drogaria_api.exception;
 
 public class ResourceNotFoundException extends RuntimeException{
 

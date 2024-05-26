@@ -1,8 +1,8 @@
-package com.menezesmarlon.drogaria.service;
+package com.menezesmarlon.drogaria_api.service;
 
-import com.menezesmarlon.drogaria.domain.Categoria;
-import com.menezesmarlon.drogaria.exception.ResourceNotFoundException;
-import com.menezesmarlon.drogaria.repository.CategoriaRepository;
+import com.menezesmarlon.drogaria_api.domain.Categoria;
+import com.menezesmarlon.drogaria_api.exception.ResourceNotFoundException;
+import com.menezesmarlon.drogaria_api.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
